@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C9B6DE2C-6E0E-4D6D-846E-4D0F5DBC3319}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CSharpDesignPatterns</RootNamespace>
+    <AssemblyName>CSharpDesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractFactory\Document.cs" />
+    <Compile Include="AbstractFactory\IDocumentFactory.cs" />
+    <Compile Include="AbstractFactory\NewStyleDocumentFactory.cs" />
+    <Compile Include="AbstractFactory\OldStyleDocumentFactory.cs" />
+    <Compile Include="Command\Client.cs" />
+    <Compile Include="Command\ElectricDuck.cs" />
+    <Compile Include="Command\FlyCommand.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\RemoteControl.cs" />
+    <Compile Include="Command\RunCommand.cs" />
+    <Compile Include="FactoryMethod\Pages\AboutUsBlogPage.cs" />
+    <Compile Include="FactoryMethod\Blog.cs" />
+    <Compile Include="FactoryMethod\BusinessBlog.cs" />
+    <Compile Include="FactoryMethod\Pages\HomeBlogPage.cs" />
+    <Compile Include="FactoryMethod\Pages\IBlogPage.cs" />
+    <Compile Include="FactoryMethod\Pages\MainBlogPage.cs" />
+    <Compile Include="FactoryMethod\PersonalBlog.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\CarSingleton.cs" />
+    <Compile Include="State\Account.cs" />
+    <Compile Include="State\GoldState.cs" />
+    <Compile Include="State\RedState.cs" />
+    <Compile Include="State\SilverState.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="Strategy\IAuthenticate.cs" />
+    <Compile Include="Strategy\RemoteAuthenticate.cs" />
+    <Compile Include="Strategy\WinServerAuthenticate.cs" />
+    <Compile Include="TemplateMethod\Categories.cs" />
+    <Compile Include="TemplateMethod\DataAccessObject.cs" />
+    <Compile Include="TemplateMethod\Products.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
